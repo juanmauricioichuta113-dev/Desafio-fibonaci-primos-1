@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Web: Fibonacci y Primos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Matemáticas que resuelven problemas: Fibonacci y Números Primos en la vida real</h1>
+        <p class="autor">Estudiante:Juan Mauricio Laura Ichuta</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="card">
+            <h2>Contexto del Problema Real</h2>
+            <p>
+                En el ámbito de la seguridad informática y la optimización de algoritmos, la generación de claves dinámicas suele basarse en patrones predecibles pero difíciles de romper a gran escala. Al combinar la <strong>sucesión de Fibonacci</strong> con la filtración de <strong>números primos</strong>, podemos generar identificadores de seguridad secuenciales altamente eficientes para sistemas distribuidos, asegurando que solo ciertos eslabones de la cadena (aquellos que cumplen ambas condiciones matemáticas) sean válidos para operaciones críticas.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Explicación del Algoritmo</h2>
+            <p>
+                El sistema solicita una cantidad de términos al usuario. Primero, mediante un ciclo iterativo, calcula los números de la serie de Fibonacci utilizando variables simples (sin almacenar vectores). En cada iteración, tomamos el número de Fibonacci resultante y lo evaluamos con un algoritmo de prueba de primalidad, contando cuántos divisores exactos tiene. Si solo tiene dos divisores (el 1 y sí mismo), se identifica y resalta como un número primo.
+            </p>
+        </section>
+
+        <section class="card form-section">
+            <h2>Simulador de Secuencias Seguras</h2>
+            <form id="formularioSecuencia" onsubmit="event.preventDefault(); procesarSecuencia();">
+                <div class="form-group">
+                    <label for="cantidadTerminos">Cantidad de términos de Fibonacci a evaluar:</label>
+                    <input type="number" id="cantidadTerminos" min="1" max="40" placeholder="Ej. 10" required>
+                </div>
+                <button type="submit" id="btnCalcular">Generar y Verificar</button>
+            </form>
+        </section>
+
+        <section class="card result-section">
+            <h2>Resultados Obtenidos</h2>
+            <div id="resultado">
+                <p class="placeholder-text">Introduce un número arriba para iniciar el análisis matemático.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Conclusión</h2>
+            <p>
+                La matemática aplicada nos permite modelar comportamientos y resolver problemas lógicos con pocos recursos de hardware. Al no utilizar arrays o estructuras complejas en la memoria interna del servidor, optimizamos el rendimiento del procesador de la misma forma en que los sistemas embebidos validan firmas digitales en tiempo real.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>Proyecto desarrollado para el Desafío Web 2026.</p>
+        <div class="links">
+            <a href="https://github.com/juanmauricioichuta113-dev/Desafio-fibonaci-primos-1.git" target="_blank" id="linkGit">Repositorio Git</a>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
